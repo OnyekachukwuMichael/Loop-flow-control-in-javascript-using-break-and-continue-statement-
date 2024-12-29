@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h2>Using label to control loop flow: example 1</h2>
+  
+  <script>
+    document.write("Starting the loop: <br>");
+    Outerloop: 
+    for (let i = 0; i < 5; i++){
+      document.write("Outerloop: " + i + "<br>");
+      
+      Innerloop:
+      for (let j = 0; j < 5; j++){
+        if(j > 3) break;
+        if(i == 2) break Innerloop;
+        if(i == 4) break Outerloop;
+        
+        document.write("Innerloop: " + j + "<br>");
+      }
+    }
+    
+  </script>
+  
+</body>
+</html>
